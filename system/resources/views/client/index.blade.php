@@ -4,7 +4,7 @@
 	<meta charset="utf-8"/>
 	<meta content="IE-edge" http-equiv="X-UA-Compatible"/>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-	<title>Disini Jual Kopi.</title>
+	<title>Disini Jual Alat Kopi.</title>
 	<link rel="stylesheet" href="{{url('public')}}/css/home.css">
 	<link href="{{url('public')}}/img/favicon.png" rel="shortcut icon"/>
 	<script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
@@ -13,12 +13,12 @@
 	<section class="main">
 		<div class="logo">
 			<img src="{{url('public')}}/img/favicon.png" style="width: 20px;height: 20px;">
-			<a href="{{url('/')}}"><font>KO</font>PI</a>
+			<a href="{{url('index')}}"><font>KO</font>PI</a>
 		</div>
 		<div class="side-box">
 			<div class="search">
 				<i class="fas fa-search"></i>
-				<input placeholder="Search" type="text"/>
+				<input placeholder="Cari..." type="text"/>
 			</div>	
 		</div>
     	<div class="m-img">
@@ -30,8 +30,8 @@
 			<a class="m-btn" href="#">Lihat Detail</a>
 		</div>
 		<div class="social">
-			<a href="{{ url('beranda') }}"><i class="fas fa-user"></i></a>
-			<a href="{{url('beranda')}}"><i class="fas fa-user-tie"></i>Admin</a>
+			<a href="{{ url('login') }}"><i class="fas fa-user"></i></a>
+			<a href="{{url('register')}}"><i class="fas fa-user-plus"></i></a>
 		</div>
 	</section>
 
@@ -55,7 +55,7 @@
 	<div class="brand-text">
 		<h3>Bali Kintamani</h3>
 		<h4>Kopi dari Petani <font>Terbaik</font> </h4>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus similique, veniam libero fuga, error natus ipsum excepturi quae est suscipit facilis dicta ipsam rerum assumenda, debitis odit? Perferendis commodi quas animi, iusto voluptatem laudantium assumenda deleniti rem praesentium doloribus cupiditate error unde aut corrupti dolorum at veniam dolore eum. Voluptatibus!</p>
+		<p align="justify">Selain terkenal dengan keindahan alamnya, ternyata Bali juga terkenal dengan kopi kintamaninya. Mempunyai cita rasa yang sangat unik dibandingkan dengan jenis produk kopi yang lainnya. Kopi Bali Kintamani ini telah memiliki keunggulan kompetitif tersendiri dan telah banyak diminati oleh penggemar kopi dari berbagai dunia.</p>
 	</div>
 	<div class="brand-img"><img src="{{url('public')}}/img/brand.jpg" /></div>
 	</section>
@@ -63,17 +63,16 @@
 	<section class="subcribe-container">
 		<h3>Berlangganan Kopi?</h3>
 		<div class="subcribe-input">
-			<input placeholder="Example@gmail.com" type="email" />
-			<a class="subcribe-btn" href="#">Send</a>
+			<input placeholder="Contoh@gmail.com" type="email" />
+			<a class="subcribe-btn" href="#">Kirim</a>
 		</div>
 	</section>
 	<footer>
 		<h3>Kategori</h3>
 		<ul class="footer-menu">
-			<li><a href="#">Espresso Maker</a></li>
-			<li><a href="#">Whole Bean</a></li>
-			<li><a href="#">Manual Brew</a></li>
-			<li><a href="#">Accessories</a></li>
+			@foreach($list_kategori as $kategori)
+				<li><a href="#">{{$kategori->nama}}</a></li>
+			@endforeach
 		</ul>
 	</footer>
 <a class="copyright" href="#">&#169; Copyright 2020. Shop by Kopi Bang</a>

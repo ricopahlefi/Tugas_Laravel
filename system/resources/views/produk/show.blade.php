@@ -8,7 +8,7 @@
 				<div class="card">
 					<div class="card-header">
 						Detail Produk
-						<a href="{{url('produk')}}" class="btn btn-dark float-right"><i class="fas fa-arrow-left"></i>  Kembali</a>
+						<a href="{{url('admin/produk')}}" class="btn btn-dark float-right"><i class="fas fa-arrow-left"></i>  Kembali</a>
 
 					</div>
 					<div class="card-body">

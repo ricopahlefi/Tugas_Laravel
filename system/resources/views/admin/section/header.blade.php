@@ -18,8 +18,12 @@
 
   <ul class="navbar-nav ml-auto">
     <li class="nav-item dropdown">
-      <a class="nav-link" data-toggle="dropdown" href="#">
-          Rico Pahlefi
+          @if(Auth::check())
+          <a class="nav-link" data-toggle="dropdown" href="#">
+            {{request()->user()->nama}}
+          @else
+            <a href="{{url('login')}}">Silahkan Login</a>
+          @endif
       <img src="#" alt="">
       </a>
       <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
@@ -38,7 +42,7 @@
             </div>
           </a>
           <div class="dropdown-divider"><i class="fas fa-sign-out-alt"></i>Log Out</div>
-          <a href="{{url('admin')}}" class="dropdown-item dropdown-footer"><i class="fas fa-sign-out-alt"></i>Logout</a>
+          <a href="{{url('logout')}}" class="dropdown-item dropdown-footer"><i class="fas fa-sign-out-alt"></i>Logout</a>
       </div>
     </li>
   </ul>

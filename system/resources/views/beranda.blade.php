@@ -9,7 +9,7 @@
 				<div class="card">
 					<div class="card-header">
 						Selamat datang Pak Boss!!!
-						<a href="{{url('client')}}" class="btn btn-dark float-right"><i class="fas fa-home"></i>  Client Page</a>
+						<a href="{{url('index')}}" class="btn btn-dark float-right"><i class="fas fa-home"></i>  Client Page</a>
 					</div>
 				</div>
 			</div>

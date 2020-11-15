@@ -8,7 +8,7 @@
 				<div class="card">
 					<div class="card-header">
 						Kategori
-						<a href="{{url('kategori')}}" class="btn btn-dark float-right"><i class="fas fa-arrow-left"></i>  Kembali</a>
+						<a href="{{url('admin/kategori')}}" class="btn btn-dark float-right"><i class="fas fa-arrow-left"></i>  Kembali</a>
 
 					</div>
 					<div class="card-body">
